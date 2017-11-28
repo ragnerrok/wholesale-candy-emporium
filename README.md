@@ -1,4 +1,8 @@
+
 # WholesaleCandyEmporium
+Code Challenge using Angular! ^ _ ^
+
+-- Below is stuff the Angular CLI generated --
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
 
