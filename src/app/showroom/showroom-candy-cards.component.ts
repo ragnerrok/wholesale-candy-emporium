@@ -4,12 +4,10 @@ import { Candy } from "./candy.model.ts";
 @Component({
   selector: 'app-showroom-candy-cards',
   template:`
-    <div class="col-m-8 col-md-offset-2">
-        <app-showroom-candy-card
+        <app-showroom-candy-card class="col-m-8 col-md-offset-2"
           [candy]="candy"
           *ngFor="let candy of candies"
           ></app-showroom-candy-card>
-    </div>
   `
 })
 export class ShowroomCandyCardsComponent {
