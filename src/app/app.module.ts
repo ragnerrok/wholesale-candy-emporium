@@ -8,6 +8,8 @@ import { ShowroomCandyCardsComponent } from './showroom/showroom-candy-cards.com
 import { ShowroomCandyCardComponent } from './showroom/showroom-candy-card.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { CartComponent } from './cart/cart.component';
+import { CartItemComponent } from './cart/cart-item.component';
+
 
 import { routing } from "./app.routing";
 
@@ -18,7 +20,8 @@ import { routing } from "./app.routing";
     ShowroomCandyCardsComponent,
     ShowroomCandyCardComponent,
     CheckoutComponent,
-    CartComponent
+    CartComponent,
+    CartItemComponent
   ],
   imports: [ BrowserModule, routing],
   providers: [],
