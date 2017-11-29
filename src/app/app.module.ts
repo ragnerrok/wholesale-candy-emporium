@@ -11,6 +11,7 @@ import { CartComponent } from './cart/cart.component';
 import { CartItemComponent } from './cart/cart-item.component';
 
 import { CandyService } from './showroom/candy.service';
+import { CartItemsService } from './cart/cart-items.service';
 
 
 import { routing } from "./app.routing";
@@ -26,7 +27,7 @@ import { routing } from "./app.routing";
     CartItemComponent
   ],
   imports: [ BrowserModule, routing],
-  providers: [CandyService],
+  providers: [CandyService, CartItemsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

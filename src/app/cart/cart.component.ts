@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { CartItem } from "./cart-item.model.ts";
 import { Candy } from "../showroom/candy.model.ts";
+import { CartItemsService } from "./cart-items.service.ts";
 
 @Component({
   selector: 'app-cart',
@@ -23,10 +24,15 @@ import { Candy } from "../showroom/candy.model.ts";
         </div>
   `,
 })
-export class CartComponent {
+export class CartComponent implements OnInit {
   cartTotal: number = 100;
-  cartItems: CartItem[] = [
+  cartItems: CartItem[];
     //using fake item till I get services up and running
-    new CartItem(new Candy('Fundo Bar', 'Small', 1, 100), 10)
-  ];
+    //new CartItem(new Candy('Fundo Bar', 'Small', 1, 100), 10)
+
+    constructor(private cartItemsService: CartItemsService) {}
+
+    ngOnInit() {
+      //this.cartItems = this.cartItemService.getCartItems();
+    }
 }
