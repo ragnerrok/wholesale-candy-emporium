@@ -1,5 +1,6 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { Candy } from "./candy.model.ts";
+import { CandyService } from "./candy.service.ts";
 
 @Component({
   selector: 'app-showroom-candy-cards',
@@ -12,18 +13,14 @@ import { Candy } from "./candy.model.ts";
     </div>
   `
 })
-export class ShowroomCandyCardsComponent {
+export class ShowroomCandyCardsComponent implements OnInit {
   //this is where I would start having the app go ask the backend "hey what candy I got?"
-  candies: Candy[] = [
-              //name, size, price
-    new Candy('Fundo Bar', 'Small', 1, 100),
-    new Candy('Fundo Bar', 'Medium', 1.5, 100),
-    new Candy('Fundo Bar', 'Large', 3, 100),
+  candies: Candy[];
 
-    new Candy('Extreme Micro Sours', '', 1, 100),
+  constructor(private candyService: CandyService) {}
 
-    new Candy('Solo Brand Twirly Ropes', 'Small', 10, 100),
-    new Candy('Solo Brand Twirly Ropes', 'Medium', 12.75, 100)
-  ];
+  ngOnInit() {
+    this.candies = this.candyService.getCandies();
+  }
 
 }

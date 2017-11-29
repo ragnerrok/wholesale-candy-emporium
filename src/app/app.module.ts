@@ -10,6 +10,8 @@ import { CheckoutComponent } from './checkout/checkout.component';
 import { CartComponent } from './cart/cart.component';
 import { CartItemComponent } from './cart/cart-item.component';
 
+import { CandyService } from './showroom/candy.service';
+
 
 import { routing } from "./app.routing";
 
@@ -24,7 +26,7 @@ import { routing } from "./app.routing";
     CartItemComponent
   ],
   imports: [ BrowserModule, routing],
-  providers: [],
+  providers: [CandyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
