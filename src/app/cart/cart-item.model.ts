@@ -1,4 +1,4 @@
-import { Candy } from "../showroom/candy.model.ts";
+import { Candy } from "../showroom/candy.model";
 
 export class CartItem {
   constructor(public id: number,

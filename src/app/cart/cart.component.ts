@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { CartItem } from "./cart-item.model";
 import { Candy } from "../showroom/candy.model";
 import { CartItemsService } from "./cart-items.service";
@@ -8,7 +8,7 @@ import { CartItemsService } from "./cart-items.service";
   template: `
     <div class="row">
       <app-cart-item class="col-12"
-        [cartItem]="cartItem"
+
         *ngFor="let cartItem of cartItems"
         ></app-cart-item>
 

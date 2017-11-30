@@ -2,7 +2,7 @@ import { CartItem } from "./cart-item.model";
 
 export class CartItemsService {
   //Im not really sure I can do this but Im gonna try
-  private cartItems: CartItem[] = {};
+  private cartItems: CartItem[];
   private idGenerator: number = 0;
 
   addItemToCart(item: CartItem) {
@@ -11,7 +11,8 @@ export class CartItemsService {
   }
 
   updateCartItem(id: number, amount: number) {
-    this.cartItems[id].amount = currentInventory - amountBought;
+
+    this.cartItems[id].amount = amount;
     console.log('Update', this.cartItems);
   }
 
@@ -25,7 +26,7 @@ export class CartItemsService {
   }
 
   deleteCartItem(id: number){
-    delete cartItems[id];
+    delete this.cartItems[id];
     console.log('Delete', this.cartItems);
   }
 
