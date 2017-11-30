@@ -1,10 +1,15 @@
+import { Injectable } from '@angular/core';
 import { CartItem } from "./cart-item.model";
 import { Candy } from "../showroom/candy.model";
+import { CandyService } from '../showroom/candy.service';
 
+@Injectable()
 export class CartItemsService {
   //Im not really sure I can do this but Im gonna try
   private totalPrice: number = 0;
   private cartItems: CartItem[] = [];
+
+  constructor(private candyService: CandyService) {}
 
   addCandyToCart(candy: Candy, amount?: number) {
     let newItem = new CartItem(candy, amount ? amount : 1);
@@ -46,6 +51,13 @@ export class CartItemsService {
   getTotalPrice(){
     console.log('GetPrice', this.totalPrice);
     return this.totalPrice;
+  }
+
+  completeItemOrder(){
+    for(var i = 0; i < this.cartItems.length; i++){
+      this.candyService.updateCandyInventory(this.cartItems[i].candy, this.cartItems[i].amount);
+    }
+    this.cartItems = [];
   }
 
 }
