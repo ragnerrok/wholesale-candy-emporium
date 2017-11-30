@@ -24,7 +24,7 @@ export class PreviewOrderComponent {
 
     ngOnInit() {
       this.cartItems = this.cartItemsService.getCartItems();
-      this.cartTotal = this.cartItemsService.getTotalPrice();
+    //  this.cartTotal = this.cartItemsService.getTotalPrice();
     }
 
     onCompleteOrder() {

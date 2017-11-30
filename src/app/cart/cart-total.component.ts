@@ -19,7 +19,7 @@ export class CartTotalComponent implements OnInit {
     constructor(private cartItemsService: CartItemsService) {}
 
     ngOnInit() {
-
+        
     }
 
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { CartItem } from "./cart-item.model";
 import { Candy } from "../showroom/candy.model";
 import { CartItemsService } from "./cart-items.service";
+import { Observable } from "rxjs/Observable"
 
 @Component({
   selector: 'app-cart',
@@ -26,7 +27,7 @@ export class CartComponent implements OnInit {
 
     ngOnInit() {
       this.cartItems = this.cartItemsService.getCartItems();
-      this.cartTotal = this.cartItemsService.getTotalPrice();
+      this.cartItemsService.getTotalPrice().subscribe(cartTotal => this.cartTotal = cartTotal);
     }
 
 
