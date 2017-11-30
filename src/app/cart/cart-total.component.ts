@@ -9,7 +9,7 @@ import { CartItemsService } from "./cart-items.service";
           <div class="card-title">
             <strong> Total </strong> $ {{ cartTotal }}
           </div>
-          <a class="btn btn-primary ">Checkout</a>
+          <a class="btn btn-primary" [routerLink]="['/checkout']">Checkout</a>
         </div>
   `,
 })

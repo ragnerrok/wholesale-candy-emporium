@@ -1,0 +1,16 @@
+<div class="container">
+  <h3> Checkout </h3>
+  <header class="row spacing">
+    <nav class="col">
+      <ul class="nav nav-tabs">
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['payment']">Payment</a></li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['shipping']">Shipping</a></li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['preview']">Preview Order</a></li>
+      </ul>
+    </nav>
+  </header>
+  <router-outlet></router-outlet>
+</div>

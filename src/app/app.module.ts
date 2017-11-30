@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from "@angular/forms";
 
 import { AppComponent } from './app.component';
 
@@ -9,6 +10,10 @@ import { ShowroomCandyCardComponent } from './showroom/showroom-candy-card.compo
 import { CandyProductPageComponent } from './showroom/candy-product-page.component';
 
 import { CheckoutComponent } from './checkout/checkout.component';
+import { PaymentComponent } from './checkout/payment.component';
+import { ShippingComponent } from './checkout/shipping.component';
+import { PreviewOrderComponent } from './checkout/preview-order.component';
+
 import { CartComponent } from './cart/cart.component';
 import { CartTotalComponent } from './cart/cart-total.component';
 import { CartItemComponent } from './cart/cart-item.component';
@@ -28,11 +33,15 @@ import { routing } from "./app.routing";
     CandyProductPageComponent,
 
     CheckoutComponent,
+    PaymentComponent,
+    ShippingComponent,
+    PreviewOrderComponent,
+
     CartComponent,
     CartTotalComponent,
     CartItemComponent
   ],
-  imports: [ BrowserModule, routing],
+  imports: [ BrowserModule, routing, FormsModule],
   providers: [CandyService, CartItemsService],
   bootstrap: [AppComponent]
 })
