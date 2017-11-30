@@ -1,5 +1,6 @@
 import { Candy } from "./candy.model";
 export class CandyService {
+  private chosenCandy: Candy;
   private candies: Candy[] = [
     //name, size, price
     new Candy('Fundo Bar', 'Small', 1, 100),
@@ -22,6 +23,19 @@ export class CandyService {
 
   getCandies(){
     return this.candies;
+  }
+
+  getChosenCandy(){
+    if(this.chosenCandy){
+      return this.chosenCandy;
+    }else{
+      this.setChosenCandy(this.candies[0]);
+      return this.candies[0];
+    }
+  }
+
+  setChosenCandy(candy: Candy){
+    this.chosenCandy = candy;
   }
 
 }

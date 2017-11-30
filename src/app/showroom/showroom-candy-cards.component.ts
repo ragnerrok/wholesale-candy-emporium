@@ -11,7 +11,8 @@ import { CandyService } from "./candy.service";
           *ngFor="let candy of candies"
           ></app-showroom-candy-card>
     </div>
-  `
+  `,
+  host: {'class': 'col-9 p-0'}
 })
 export class ShowroomCandyCardsComponent implements OnInit {
   //this is where I would start having the app go ask the backend "hey what candy I got?"
