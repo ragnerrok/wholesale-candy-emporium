@@ -8,11 +8,11 @@ import { CartItemsService } from "./cart-items.service";
   template: `
     <div class="row">
       <app-cart-item class="col-12"
-
+        [cartItem]="cartItem"
         *ngFor="let cartItem of cartItems"
         ></app-cart-item>
 
-        <div class="col-12">
+        <div class="col-12" style="width:100%;">
           <div class="card" style="margin:10px;">
             <div class="card-block">
               <p class="card-title">
@@ -33,6 +33,6 @@ export class CartComponent implements OnInit {
     constructor(private cartItemsService: CartItemsService) {}
 
     ngOnInit() {
-      //this.cartItems = this.cartItemService.getCartItems();
+      this.cartItems = this.cartItemsService.getCartItems();
     }
 }
