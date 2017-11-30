@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from "@angular/forms";
+import { Observable } from "rxjs/Rx";
 
 import { AppComponent } from './app.component';
 
@@ -13,6 +14,7 @@ import { CheckoutComponent } from './checkout/checkout.component';
 import { PaymentComponent } from './checkout/payment.component';
 import { ShippingComponent } from './checkout/shipping.component';
 import { PreviewOrderComponent } from './checkout/preview-order.component';
+import { CompleteOrderComponent } from './checkout/complete-order.component';
 
 import { CartComponent } from './cart/cart.component';
 import { CartTotalComponent } from './cart/cart-total.component';
@@ -36,6 +38,7 @@ import { routing } from "./app.routing";
     PaymentComponent,
     ShippingComponent,
     PreviewOrderComponent,
+    CompleteOrderComponent,
 
     CartComponent,
     CartTotalComponent,
