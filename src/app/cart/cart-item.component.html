@@ -1,8 +1,14 @@
 <div class="card" style="margin:10px;">
   <div class="card-body">
     <div class="card-title">
-      <img style="max-width:50px;" class="img-thumbnail" src="../../assets/{{ cartItem.candy.image }}" alt="Card image"> <strong>{{ cartItem.candy.name }} </strong>  ${{ cartItem.candy.price }} 
+      <img style="max-width:50px;" class="img-thumbnail" src="../../assets/{{ cartItem.candy.image }}" alt="Card image">
+      <strong>{{ cartItem.candy.name }} </strong>  ${{ cartItem.candy.price }} <span class="text-right">Current Selection {{ cartItem.amount }}</span>
+      <p class=""> How many?
+        <input style="max-width:30px;" type="text" [(ngModel)]="cartItem.amount">
+        <a class="btn btn-outline-primary" (click)="onUpdateItem(cartItem.amount)">Update</a>
+      </p>
     </div>
+
     <a class="btn btn-outline-danger" (click)="onDeleteItem()">Delete</a>
   </div>
 </div>

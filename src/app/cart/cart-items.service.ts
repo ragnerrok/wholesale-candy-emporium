@@ -6,8 +6,8 @@ export class CartItemsService {
   private totalPrice: number = 0;
   private cartItems: CartItem[] = [];
 
-  addCandyToCart(candy: Candy) {
-    let newItem = new CartItem(candy, 1);
+  addCandyToCart(candy: Candy, amount?: number) {
+    let newItem = new CartItem(candy, amount ? amount : 1);
     this.cartItems.push(newItem);
     this.setTotalPrice();
     console.log('Add', this.cartItems)
@@ -30,6 +30,7 @@ export class CartItemsService {
 
   deleteCartItem(item: CartItem){
     this.cartItems.splice(this.cartItems.indexOf(item), 1);
+    this.setTotalPrice();
     console.log('Delete', this.cartItems);
   }
 

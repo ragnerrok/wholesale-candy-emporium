@@ -16,4 +16,8 @@ export class CartItemComponent {
     this.cartItemsService.deleteCartItem(this.cartItem);
   }
 
+  onUpdateItem(amount: number){
+    this.cartItemsService.updateCartItem(this.cartItem, amount);
+  }
+
 }
