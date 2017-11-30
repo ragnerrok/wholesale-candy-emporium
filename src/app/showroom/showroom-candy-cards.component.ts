@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { Candy } from "./candy.model.ts";
-import { CandyService } from "./candy.service.ts";
+import { Candy } from "./candy.model";
+import { CandyService } from "./candy.service";
 
 @Component({
   selector: 'app-showroom-candy-cards',

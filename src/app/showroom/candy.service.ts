@@ -14,8 +14,8 @@ export class CandyService {
   ];
 
   updateCandyInventory(id: number, amountBought: number) {
-    currentInventory = this.candy[id].inventory;
-    this.candy[id].inventory = currentInventory - amountBought;
+    let currentInventory = this.candies[id].inventory;
+    this.candies[id].inventory = currentInventory - amountBought;
     console.log(this.candies)
   }
 
