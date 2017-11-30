@@ -4,5 +4,5 @@ import { CandyProductPageComponent } from './candy-product-page.component';
 
 export const CANDY_ROUTES: Routes = [
     { path: '', component: ShowroomCandyCardsComponent},
-    { path: 'candy:name', component: CandyProductPageComponent }
+    { path: 'candy', component: CandyProductPageComponent }
 ];
