@@ -1,4 +1,25 @@
 <div class="container-fluid">
-  <h1> Product Page </h1>
-  <p> {{ candy.name }} </p>
+  <h1> {{ candy.name }} </h1>
+  <img [routerLink]="['candy']"
+        (click)="goToProductPage()"
+        class="img-responsive"
+        style="max-width:300px; margin:40px;"
+        src="../../assets/{{ candy.image }}"
+        alt="Candy image">
+  <p> {{ candy.description }} </p>
+  <p class="card-text">
+    ${{ candy.price }}
+  </p>
+  <div class="form-group" style="max-width:200px;">
+      <label for="content">How Many</label>
+      <input
+        type="text"
+        id="amount"
+        class="form-control"
+        #input>
+        <a  style="margin:20px;" class="btn btn-primary pull-right" type="submit" (click)="onSubmit(input.value)" >Add to Cart</a>
+    </div>
+    <p class="card-text">
+      Amount left in Inventory {{ candy.inventory }}
+    </p>
 </div>
