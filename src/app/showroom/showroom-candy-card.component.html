@@ -1,5 +1,5 @@
-<div class="card" style="width:300px; height:350px; margin:40px;">
-  <img [routerLink]="['candy']" (click)="goToProductPage()" class="card-img-top" src="" alt="Card image">
+<div class="card" style="max-width:300px; margin:40px;">
+  <img [routerLink]="['candy']" (click)="goToProductPage()" class="card-img-top img-responsive" src="../../assets/{{ candy.image }}" alt="Card image">
   <div class="card-body">
     <h4 class="card-title">
       {{ candy.name }}
@@ -10,6 +10,6 @@
     <p class="card-text">
       ${{ candy.price }}
     </p>
-    <a class="btn btn-primary" (click)="onAddCandy()" >Add to Cart</a>
+    <a class="btn btn-primary pull-right" (click)="onAddCandy()" >Add to Cart</a>
   </div>
 </div>
