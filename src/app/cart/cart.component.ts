@@ -6,26 +6,18 @@ import { CartItemsService } from "./cart-items.service";
 @Component({
   selector: 'app-cart',
   template: `
-    <div class="row">
+    <div class="row" style="width: 100%;">
       <app-cart-item class="col-12"
         [cartItem]="cartItem"
         *ngFor="let cartItem of cartItems"
         ></app-cart-item>
 
-        <div class="col-12" style="width:100%;">
-          <div class="card" style="margin:10px;">
-            <div class="card-block">
-              <p class="card-title">
-                Total {{ cartTotal }}
-              </p>
-              <a class="btn btn-primary">Checkout</a>
-            </div>
-          </div>
+        <app-cart-total class="col-12" [cartTotal]="cartTotal"></app-cart-total>
         </div>
   `,
 })
 export class CartComponent implements OnInit {
-  cartTotal: number = 100;
+  cartTotal: number;
   cartItems: CartItem[];
     //using fake item till I get services up and running
     //new CartItem(new Candy('Fundo Bar', 'Small', 1, 100), 10)
@@ -34,5 +26,10 @@ export class CartComponent implements OnInit {
 
     ngOnInit() {
       this.cartItems = this.cartItemsService.getCartItems();
+      this.cartTotal = this.cartItemsService.getTotalPrice();
     }
+
+
+
+
 }
