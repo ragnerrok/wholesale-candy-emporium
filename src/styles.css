@@ -33,3 +33,16 @@
 .spacing-on-top {
   margin-top: 40px;
 }
+
+.font-large {
+  font-size: 250%;
+}
+
+.out-of-stock {
+  color: #6F1514;
+}
+
+.sold-out {
+  font-size: 200%;
+  color: #6F1514;
+}

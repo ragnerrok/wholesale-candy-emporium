@@ -1,25 +1,32 @@
 <div class="container-fluid">
-  <h1> {{ candy.name }} </h1>
-  <img [routerLink]="['candy']"
-        (click)="goToProductPage()"
-        class="img-responsive"
-        style="max-width:300px; margin:40px;"
-        src="../../assets/{{ candy.image }}"
-        alt="Candy image">
-  <p> {{ candy.description }} </p>
-  <p class="card-text">
+  <a class="text-baby-purple" style="margin-bottom:100px;" [routerLink]="['/showroom']">Back to Showroom</a>
+  <h1  class="useCandyFont text-baby-blue" style="margin:40px;"> {{ candy.name }} </h1>
+  <div class="row">
+    <div class="col">
+      <img  class="img-responsive"
+            style="max-width:200px; margin:40px;"
+            src="../../assets/{{ candy.image }}"
+            alt="Candy image">
+    </div>
+    <div class="col">
+      <p style="max-width:200px"> {{ candy.description }} </p>
+    </div>
+  </div>
+  <p class="card-text price-large">
     ${{ candy.price }}
   </p>
   <div class="form-group" style="max-width:200px;">
       <label for="content">How Many</label>
       <input
+        [disabled]="candy.inventory <= 0 "
         type="text"
         id="amount"
         class="form-control"
         #input>
-        <a  style="margin:20px;" class="btn btn-primary pull-right" type="submit" (click)="onSubmit(input.value)" >Add to Cart</a>
+        <button  style="margin:20px;" [disabled]="candy.inventory <= 0" class="btn btn-primary pull-right" type="submit" (click)="onSubmit(input.value)" >Add to Cart</button>
     </div>
-    <p class="card-text">
-      Amount left in Inventory {{ candy.inventory }}
+    <div class="sold-out" [hidden]="candy.inventory > 0">SOLD OUT</div>
+    <p class="card-text" [ngClass]="{'text-baby-blue': candy.inventory > 50}">
+      Available Stock {{ candy.inventory }}
     </p>
 </div>
