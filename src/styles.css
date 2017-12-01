@@ -54,3 +54,35 @@
 .sold-out-fade {
   opacity: 0.5;
 }
+
+.fundo-bar-small {
+  content:url("/assets/fundo-bar-small.png");
+}
+
+.fundo-bar-medium {
+  content:url("/assets/fundo-bar-medium.png");
+}
+
+.fundo-bar-large {
+  content:url("/assets/fundo-bar-large.png");
+}
+
+.extreme-micro-sours {
+  content:url("/assets/extreme-micro-sours.png");
+}
+
+.solo-brand-twirly-rope-small {
+  content:url("/assets/solo-brand-twirly-rope-small.png");
+}
+
+.solo-brand-twirly-rope-medium {
+  content:url("/assets/solo-brand-twirly-rope-medium.png");
+}
+
+.girly-candy {
+  content:url("/assets/girly-candy.png");
+}
+
+.cart {
+  content:url("/assets/cart.png");
+}

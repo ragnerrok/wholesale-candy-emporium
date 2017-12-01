@@ -5,7 +5,7 @@ import { Component } from "@angular/core";
   template: `
   <a style="margin:20px;" class="text-baby-purple" [routerLink]="['']" >Continue Shopping</a>
   <div class="container">
-    <img [routerLink]="['']" class="img-responsive" style="max-width: 300px" src="../assets/girly-candy.png" alt="Candy image">
+    <img [routerLink]="['']" class="img-responsive girly-candy" style="max-width: 300px" alt="Candy image">
     <h4 class="useCandyFont text-baby-purple font-large"> Thank you for buying! </h4>
   </div>
   `,
