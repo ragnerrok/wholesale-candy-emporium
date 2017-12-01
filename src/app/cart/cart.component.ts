@@ -23,11 +23,13 @@ export class CartComponent implements OnInit {
     //using fake item till I get services up and running
     //new CartItem(new Candy('Fundo Bar', 'Small', 1, 100), 10)
 
-    constructor(private cartItemsService: CartItemsService) {}
+    constructor(private cartItemsService: CartItemsService) {
+      this.cartTotal = this.cartItemsService.getTotalPrice();
+    }
 
     ngOnInit() {
       this.cartItems = this.cartItemsService.getCartItems();
-      this.cartItemsService.getTotalPrice().subscribe(cartTotal => this.cartTotal = cartTotal);
+      this.cartItemsService.getTotalPriceSubscriber().subscribe(cartTotal => this.cartTotal = cartTotal);
     }
 
 
