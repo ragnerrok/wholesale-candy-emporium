@@ -2,7 +2,7 @@
   <div class="card-body">
     <div class="card-title">
       <img style="max-width:50px;" class="img-thumbnail" src="../../assets/{{ cartItem.candy.image }}" alt="Card image">
-      <strong>{{ cartItem.candy.name }} </strong>  ${{ cartItem.candy.price }} <span class="text-right">Current Selection {{ cartItem.amount }}</span>
+      <strong>{{ cartItem.candy.name }} </strong> <span>{{ cartItem.candy.size }}</span> <span class="font-medium"> ${{ cartItem.candy.price }} </span>
       <p class=""> How many?
         <input style="max-width:30px;" type="text" [(ngModel)]="cartItem.amount">
         <a class="btn btn-outline-primary" (click)="onUpdateItem(cartItem.amount)">Update</a>
