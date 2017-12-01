@@ -19,15 +19,25 @@ export class CartItemsService {
     let foundCandy = false;
     for(var i = 0; i < this.cartItems.length; i++){
       if(this.cartItems[i].candy === candy){
-        this.cartItems[i].amount = amount ? amount : this.cartItems[i].amount+1;
+        let chosenAmount = amount ? amount : this.cartItems[i].amount+1;
+        if(this.cartItems[i].candy.inventory > chosenAmount){
+          this.cartItems[i].amount = chosenAmount;
+        } else {
+          this.cartItems[i].amount = this.cartItems[i].candy.inventory;
+        }
         foundCandy = true;
         break;
       }
     }
     if(!foundCandy){
-      let newItem = new CartItem(candy, amount ? amount : 1);
+      let chosenAmount = amount ? amount : 1;
+      if(candy.inventory < chosenAmount){
+        chosenAmount = candy.inventory;
+      }
+      let newItem = new CartItem(candy,chosenAmount);
       this.cartItems.push(newItem);
     }
+
     this.setTotalPrice();
     console.log('Add', this.cartItems)
   }
@@ -77,6 +87,7 @@ export class CartItemsService {
       this.candyService.updateCandyInventory(this.cartItems[i].candy, this.cartItems[i].amount);
     }
     this.cartItems = [];
+    this.setTotalPrice();
   }
 
 }
