@@ -50,3 +50,7 @@
   font-size: 200%;
   color: #6F1514;
 }
+
+.sold-out-fade {
+  opacity: 0.5;
+}
