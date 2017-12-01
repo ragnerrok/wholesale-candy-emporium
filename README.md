@@ -3,7 +3,7 @@
 Code Challenge using Angular! ^ _ ^
 
 Hello!
-As long as you have installed Angular, you can run this prject locally using 'ng serve' and go to `http://localhost:4200/` (like it says below).
+As long as you have installed Angular, you can clone this project, and run it locally using 'ng serve'. Then go to `http://localhost:4200/` (like it says below).
 
 Have fun! ^ _ ^
 
