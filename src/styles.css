@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: candyFont;
+  src: url(/assets/CherryandKissesPersonalUse.ttf);
+}
+
+.useCandyFont {
+  font-family: candyFont;
+}
+
+.text-baby-blue {
+  color: #9CC9FF;
+}
+
+.text-baby-purple {
+  color: #D0CAE6;
+}
+
+.background-baby-pink {
+  background-color: #FEE3F6;
+}
+
+.border-bottom-baby-purple {
+  border-bottom: 20px;
+  border-bottom-style: double;
+  border-color: #D0CAE6;
+}
+
+.hover-baby-blue:hover {
+  background-color: #9CC9FF;
+}
+
+.spacing-on-top {
+  margin-top: 40px;
+}
