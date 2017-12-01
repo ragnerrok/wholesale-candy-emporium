@@ -8,24 +8,24 @@
             src="../../assets/{{ candy.image }}"
             alt="Candy image">
     </div>
-    <div class="col-4">
-      <p style="max-width:200px"> {{ candy.description }} </p>
+    <div class="col-5">
+      <p class="card-text font-large">
+        ${{ candy.price }}
+      </p>
+      <div [hidden]="candy.inventory <= 0" class="form-group" style="max-width:200px;">
+          <label class="text-baby-blue" for="content">How Many</label>
+          <input
+            type="text"
+            id="amount"
+            class="form-control"
+            #input>
+            <button  style="margin-top:20px;" class="btn btn-primary" type="submit" (click)="onSubmit(input.value)" >Add to Cart</button>
+        </div>
+        <div class="sold-out" [hidden]="candy.inventory > 0">SOLD OUT</div>
+        <p class="card-text" [ngClass]="{'text-baby-blue': candy.inventory > 50}">
+          Available Stock {{ candy.inventory }}
+        </p>
+      <p style=""> {{ candy.description }} </p>
     </div>
   </div>
-  <p class="card-text font-large">
-    ${{ candy.price }}
-  </p>
-  <div [hidden]="candy.inventory <= 0" class="form-group" style="max-width:200px;">
-      <label class="text-baby-blue" for="content">How Many</label>
-      <input
-        type="text"
-        id="amount"
-        class="form-control"
-        #input>
-        <button  style="margin:20px;" class="btn btn-primary pull-right" type="submit" (click)="onSubmit(input.value)" >Add to Cart</button>
-    </div>
-    <div class="sold-out" [hidden]="candy.inventory > 0">SOLD OUT</div>
-    <p class="card-text" [ngClass]="{'text-baby-blue': candy.inventory > 50}">
-      Available Stock {{ candy.inventory }}
-    </p>
 </div>
