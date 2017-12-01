@@ -10,6 +10,7 @@
     <p class="card-text">
       ${{ candy.price }}
     </p>
-    <a class="btn btn-primary pull-right" (click)="onAddCandy()" >Add to Cart</a>
+    <div class="sold-out" [hidden]="candy.inventory > 0">SOLD OUT</div>
+    <a class="btn btn-primary" [hidden]="candy.inventory <= 0" (click)="onAddCandy()" >Add to Cart</a>
   </div>
 </div>
