@@ -1,29 +1,28 @@
-<div class="container-fluid">
+<div class="container">
   <a class="text-baby-purple" style="margin-bottom:100px;" [routerLink]="['/showroom']">Back to Showroom</a>
   <h1  class="useCandyFont text-baby-blue" style="margin:40px;"> {{ candy.name }} </h1>
   <div class="row">
-    <div class="col">
+    <div class="col-4">
       <img  class="img-responsive"
             style="max-width:200px; margin:40px;"
             src="../../assets/{{ candy.image }}"
             alt="Candy image">
     </div>
-    <div class="col">
+    <div class="col-4">
       <p style="max-width:200px"> {{ candy.description }} </p>
     </div>
   </div>
-  <p class="card-text price-large">
+  <p class="card-text font-large">
     ${{ candy.price }}
   </p>
-  <div class="form-group" style="max-width:200px;">
-      <label for="content">How Many</label>
+  <div [hidden]="candy.inventory <= 0" class="form-group" style="max-width:200px;">
+      <label class="text-baby-blue" for="content">How Many</label>
       <input
-        [disabled]="candy.inventory <= 0 "
         type="text"
         id="amount"
         class="form-control"
         #input>
-        <button  style="margin:20px;" [disabled]="candy.inventory <= 0" class="btn btn-primary pull-right" type="submit" (click)="onSubmit(input.value)" >Add to Cart</button>
+        <button  style="margin:20px;" class="btn btn-primary pull-right" type="submit" (click)="onSubmit(input.value)" >Add to Cart</button>
     </div>
     <div class="sold-out" [hidden]="candy.inventory > 0">SOLD OUT</div>
     <p class="card-text" [ngClass]="{'text-baby-blue': candy.inventory > 50}">
