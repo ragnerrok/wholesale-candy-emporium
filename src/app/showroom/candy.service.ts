@@ -9,8 +9,8 @@ export class CandyService {
 
     new Candy('Extreme Micro Sours', '', 1, 100, 'extreme-micro-sours.png', 'Even the tiniest micro sour will leave you squirming in your shoes. Be careful with these, you sour patch youngsters.'),
 
-    new Candy('Solo Brand Twirly Ropes', 'Small', 10, 100, 'solo-brand-twirly-ropes-small.png', 'An individual clamshell packaged string o’ licorice. This string is so tasty, you might spend an entire day trying to open a dozen!'),
-    new Candy('Solo Brand Twirly Ropes', 'Medium', 12.75, 100, 'solo-brand-twirly-ropes-medium.png', 'An individual clamshell packaged string o’ licorice. This string is so tasty, you might spend an entire day trying to open a dozen!')
+    new Candy('Solo Brand Twirly Rope', 'Small', 10, 100, 'solo-brand-twirly-rope-small.png', 'An individual clamshell packaged string o’ licorice. This string is so tasty, you might spend an entire day trying to open a dozen!'),
+    new Candy('Solo Brand Twirly Rope', 'Medium', 12.75, 100, 'solo-brand-twirly-rope-medium.png', 'An individual clamshell packaged string o’ licorice. This string is so tasty, you might spend an entire day trying to open a dozen!')
 
   ];
 
