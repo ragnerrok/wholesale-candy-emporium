@@ -12,7 +12,7 @@ import { CandyService } from "./candy.service";
           ></app-showroom-candy-card>
     </div>
   `,
-  host: {'class': 'col-9 p-0'}
+  host: {'class': 'col-9 col-xs-12 col-md-7 col-lg-9  p-0'}
 })
 export class ShowroomCandyCardsComponent implements OnInit {
   //this is where I would start having the app go ask the backend "hey what candy I got?"
