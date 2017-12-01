@@ -19,7 +19,6 @@ export class CandyProductPageComponent implements OnInit {
   }
 
   onSubmit(amount: number) {
-    console.log(amount);
     this.cartItemsService.addCandyToCart(this.candy, amount);
   }
 

@@ -39,13 +39,11 @@ export class CartItemsService {
     }
 
     this.setTotalPrice();
-    console.log('Add', this.cartItems)
   }
 
   updateCartItem(item: CartItem, amount: number) {
     this.cartItems[this.cartItems.indexOf(item)].amount = amount;
     this.setTotalPrice();
-    console.log('Update', this.cartItems);
   }
 
   doesCandyExistInCart(candy: Candy){
@@ -53,14 +51,12 @@ export class CartItemsService {
   }
 
   getCartItems(){
-    console.log('CartItems')
     return this.cartItems;
   }
 
   deleteCartItem(item: CartItem){
     this.cartItems.splice(this.cartItems.indexOf(item), 1);
     this.setTotalPrice();
-    console.log('Delete', this.cartItems);
   }
 
   setTotalPrice(){
@@ -70,11 +66,9 @@ export class CartItemsService {
     }
     this.totalPrice = total;
     this.subjectTotal.next(this.totalPrice);
-    console.log('SetPrice', this.totalPrice);
   }
 
   getTotalPriceSubscriber(): Observable<number>{
-    console.log('GetPrice', this.totalPrice);
     return this.subjectTotal.asObservable();
   }
 

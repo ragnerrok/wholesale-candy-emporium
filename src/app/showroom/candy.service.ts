@@ -18,7 +18,6 @@ export class CandyService {
     let chosenCandy = this.candies[this.candies.indexOf(candy)];
     let currentInventory = chosenCandy.inventory;
     chosenCandy.inventory = currentInventory - amountBought;
-    console.log('Update', this.candies);
   }
 
   getCandies(){
