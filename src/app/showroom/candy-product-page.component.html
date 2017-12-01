@@ -22,7 +22,7 @@
             <button  style="margin-top:20px;" class="btn btn-primary" type="submit" (click)="onSubmit(input.value)" >Add to Cart</button>
         </div>
         <div class="sold-out" [hidden]="candy.inventory > 0">SOLD OUT</div>
-        <p class="card-text" [ngClass]="{'text-baby-blue': candy.inventory > 50}">
+        <p class="card-text" [ngClass]="{'text-baby-blue': candy.inventory > 0}">
           Available Stock {{ candy.inventory }}
         </p>
       <p style=""> {{ candy.description }} </p>
