@@ -2,8 +2,10 @@
 # WholesaleCandyEmporium
 Code Challenge using Angular! ^ _ ^
 
-So far I have some basic visuals, some services, but nothing is really hooked up yet.
-It also needs some artistic love too. 
+Hello!
+As long as you have installed Angular, you can run this prject locally using 'ng serve' and go to `http://localhost:4200/` (like it says below).
+
+Have fun! ^ _ ^
 
 # Below is stuff the Angular CLI generated
 
