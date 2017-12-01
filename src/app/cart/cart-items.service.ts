@@ -63,9 +63,13 @@ export class CartItemsService {
     console.log('SetPrice', this.totalPrice);
   }
 
-  getTotalPrice(): Observable<number>{
+  getTotalPriceSubscriber(): Observable<number>{
     console.log('GetPrice', this.totalPrice);
     return this.subjectTotal.asObservable();
+  }
+
+  getTotalPrice(): number {
+      return this.totalPrice;
   }
 
   completeItemOrder(){
