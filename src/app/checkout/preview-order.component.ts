@@ -8,12 +8,12 @@ import { Observable } from "rxjs/Observable"
   template: `
     <h4 class="spacing-on-top"> Preview Order </h4>
     <div class="row" style="width: 100%;">
-      <app-cart-item class="col-3"
+      <app-cart-item class="col"
         [cartItem]="cartItem"
         *ngFor="let cartItem of cartItems"
         ></app-cart-item>
     </div>
-    <h6 class="text-color-blue price-size ">$ {{ cartTotal }} </h6>
+    <h6 class="text-color-blue font-large "> Total $ {{ cartTotal }} </h6>
     <a class="btn btn-primary" [routerLink]="['/complete']" (click)="onCompleteOrder()">Complete Order</a>
   `,
 })
